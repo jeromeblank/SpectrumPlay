@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac a Mole</title>
+    <link rel="stylesheet" href="mole.css">
+    <script src="mole.js"></script>
+</head>
+<body>
+    <h1>Whack a Mole</h1>
+    <h2 id="score">0</h2>
+    <!-- 3x3 -->
+    <div id="board">
+    </div>
+    <form id="scoreForm" onsubmit="submitScore(); return false;">
+        <input type="hidden" id="playerName" name="playerName">
+        <input type="hidden" id="playerScore" name="playerScore">
+        <button type="submit">Submit Score</button>
+    </form>
+    <button id="restart" onclick="resetGame()">Try Again</button>
+    <a href="games.html" id="backButton">Back</a>
+
+</body>
+</html>

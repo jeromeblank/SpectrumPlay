@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #5c48ee;
+    --primary-color-dark: #0f1e6a;
+    --secondary-color: #f9fafe;
+    --text-color: #0f1e6a;
+    --white: #fff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #4da55b;
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeInDown 1s ease forwards; 
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav_logo a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_links {
+        margin-top: 1rem;
+    }
+}
+
+.link a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3;
+}
+
+.link a:hover {
+    color: #fff;
+}
+
+.link .nav_btn {
+    padding: 0.5rem 2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.link .nav_btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.container {
+    max-width: 100%; 
+    margin: auto;
+    padding: 1rem;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.content_container {
+    max-width: 100%; 
+    margin: auto; 
+}
+
+@media screen and (max-width: 768px) {
+    .content_container {
+        padding: 0 1rem;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.content_container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color-dark);
+}
+
+.content_container a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #5c48ee;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.content_container a:hover {
+    background-color: #0056b3;
+}
+
+.game_option {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.game_option:hover {
+    transform: scale(1.05);
+}
+
+.game_option img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.game_option p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.game_option a {
+    display: inline-block;
+}
+
+.score-table {
+    max-width: 100%; 
+    margin: auto; 
+    padding: 20px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    animation: slideIn 1s ease forwards; 
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.score-table table {
+    width: 100%; 
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-table th,
+.score-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.score-table th {
+    background-color: var(--primary-color-dark); 
+    color: #fff; /* White text */
+}
+
+.score-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.score-table tr:hover {
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #355e3b; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--primary-color-dark); 
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Match</title>
+    <link rel="stylesheet" type="text/css" href="g1.css">
+</head>
+<body>
+    <?php include 'database.php'; ?>
+    <div class="container">
+        <h2>Emotion Match</h2>
+        
+        <h3>How to Play:</h3>
+        <div class="how-to-play">
+            <div><strong>Objective:</strong> Match pairs of emotion cards as fast as you can.</div>
+            <div><strong>Setup:</strong>
+                <ul>
+                    <li>You can use the Arrow key to navigate the game</li>
+                    <li>Upon starting the game, a grid of emotion cards will be displayed face-down.</li>
+                    <li>Click on any two cards to reveal their emotions. If the emotions match, the cards will remain face-up. If not, they will be flipped face-down again.</li>
+                </ul>
+            </div>
+            <div><strong>Gameplay:</strong> 
+                <ul>
+                    <li>Use your memory to remember the locations of the different emotions as you uncover them.</li>
+                    <li>Click on two cards consecutively to reveal their emotions and attempt to find matching pairs.</li>
+                    <li>The game ends when all pairs have been successfully matched or the time runs out.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="game"></div>
+        <button class="reset">RESET GAME</button>
+        <a href="games.html" class="reset">BACK</a>
+        <div class="timer">Time: <span id="time">0</span> seconds</div>
+    </div>
+    
+    <audio id="backgroundMusic" loop>
+        <source src="s2.mp3">
+    </audio>
+
+    <script src="g1.js"></script>
+</body>
+</html>
